@@ -14,14 +14,13 @@ use XML::Simple;
 use JSON;
 
 # use Pod::Usage;
-use List::Util qw( min max );
+use List::Util qw(min max);
 use Term::ANSIColor;
 
 our ($fasta_file, $bed_file, $genome, $mode,$length,$max_number, $help);
 
 sub help 
-{
-print <<USAGE;
+{print <<USAGE;
 
 --- Usage ---
 	
@@ -103,96 +102,7 @@ if (defined $bed_file){
 }
 
 
-sub readfasta 
-{
-    (my $file)= shift;
-	my %sequence;
-	my $header="";
-	my $temp_seq;
-	
-	#suppose fasta files contains multiple sequences;
-	 
-	open (IN, "<$file") or die "couldn't open the file $file $!";
-	while (<IN>)
-	{	
-		$_ =~ s/\R//g;
-		next if /^\s*$/; #skip empty line 
-		if ($_ =~ /^>/)  #when see head line
-		{	
-			$header= $_;
-			if ($sequence{$header}){print colored("#CAUTION: SAME FASTA HAS BEEN READ MULTIPLE TIMES.\n#CAUTION: PLEASE CHECK FASTA SEQUENCE:$header\n","red")};
-			if ($temp_seq) {$temp_seq=""} # If there is alreay sequence in temp_seq, empty the sequence file
-			
-		}
-		else # when see the sequence line 
-		{
-		   s/\s+//g;
-		   $temp_seq .= $_;
-		   $sequence{$header}=$temp_seq; #update the contents
-		}
-	
-	}
-	
-	# Reformat the sequences and make an array of array format 
-	my @AoA;
-	foreach my $k (sort keys %sequence) {
-		my ($chr,$sta,$end);
-		if ($k =~ /.*(chr\w+):(\d+)-(\d+)/g ){
-					$chr = $1 ;
-					$sta = $2 ;
-					$end = $3 ;
-			}else{
-					$chr = "0" ;
-					$sta = "0" ;
-					$end = "0" ;
-			}
-#		print "$sequence{$k} $chr $sta $end \n"; 
-		push @AoA, [$sequence{$k},$chr,$sta,$end] 
-		
-	}
-	
-	undef %sequence;
-	
-	return \@AoA;
-}
 
-
-sub Parse_UCSC
-{
-	my ($chr,$sta,$end) = @_;
-	my ($link) ="http://genome.ucsc.edu/cgi-bin/das/"."$genome"."/dna?segment=$chr:$sta,$end";
-	my $xml = XML::Simple->new();
-	my $data = $xml->XMLin(get($link));
-	my $sequence = $data-> {SEQUENCE}->{DNA}->{content};
-	$sequence =~ s/(\s+)//gi;
-	$sequence = uc($sequence);
-	return $sequence;
-}
-
-sub readbed 
-{
-	my $file = shift;
-	my @AoA;
-	open (IN, "<$file") or die "couldn't open the file $file $!";
-	while (<IN>)
-	{	
-		#A typical bed format file looks like this 
-		#track name=pairedReads description="Clone Paired Reads" useScore=1
-		#chr22 1000000 1000500 cloneA 960 + 1000 5000 0 2 567,488, 0,3512
-		#chr22 1000600 1000800 cloneB 900 - 2000 6000 0 2 433,399, 0,3601
-		
-		chop;
-		next if /^\s*$/;  #skip empty line 
-		next unless /^chr.*/; 
-		my @bedcolumns = split(/\s+/, $_);
-#		print $bedcolumns[0],$bedcolumns[1],$bedcolumns[2];
-		my $seq= Parse_UCSC($bedcolumns[0],$bedcolumns[1],$bedcolumns[2]);
-		push @AoA, [$seq,$bedcolumns[0],$bedcolumns[1],$bedcolumns[2]] 
-#		print $bedcolumns[0];
-	}
-	
-	return \@AoA;
-}
 
 
 # ================================
@@ -201,12 +111,7 @@ sub readbed
 # detectPAM receive sequence and chromosome positions 
 # and returns an array of hash
 
-sub complementary {
-  my ($sequence) = shift;
-  my $reverse_sequence = reverse($sequence); 
-  $reverse_sequence =~ tr/ACGTRYNX/TGCAYRNX/;
-  return $reverse_sequence;
-}
+
 
 
 sub detectsgRNA

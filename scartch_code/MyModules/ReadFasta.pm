@@ -1,7 +1,6 @@
 package read_fasta;
 
 use strict;
-use Exporter;
 use vars qw($VERSION);
 
 $VERSION     = 1.00;
@@ -13,7 +12,7 @@ sub readfasta
 	my $header="";
 	my $temp_seq;
 	
-	#suppose fasta files contains multiple sequences;
+	#suppose the fasta file contains multiple sequences;
 	 
 	open (IN, "<$file") or die "couldn't open the file $file $!";
 	while (<IN>)
@@ -60,4 +59,4 @@ sub readfasta
 	return \@AoA;
 }
 
-1:
+1;

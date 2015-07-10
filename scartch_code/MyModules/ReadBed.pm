@@ -1,7 +1,6 @@
 package ReadBed;
 
 use strict;
-use Exporter;
 use vars qw($VERSION);
 
 $VERSION     = 1.00;
@@ -32,4 +31,4 @@ sub readbed
 	return \@AoA;
 }
 
-1:
+1;
