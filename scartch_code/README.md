@@ -5,7 +5,7 @@
   * ~~read_fasta~~
   * ~~read_bed_file~~
   * ~~fetch_DNA_from_UCSC~~
-  * make a script to test the functions from the PM file
+  * ~~make a script~~ and test the functions from the PM file
   * write detailed annoteation for each PM file
   * DNAStuff module (complementary; DNA->RNA; and .... )
   
