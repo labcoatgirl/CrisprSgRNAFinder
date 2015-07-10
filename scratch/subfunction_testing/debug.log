@@ -1,0 +1,43 @@
+[1;34mNow is reading exon.bed
+[0m[1;34mSequence is based on hg19
+[0mhttp://genome.ucsc.edu/cgi-bin/das/hg19/dna?segment=chr3:8809582,8809788
+http://genome.ucsc.edu/cgi-bin/das/hg19/dna?segment=chr3:8790600,8790700
+[1;34mFinish reading exon.bed
+2 sequence have been read
+[0m1 of 28 targets: acctgaaacactgccaccaccagg  chr3:8809596-8809619  missmatch is:  607
+2 of 28 targets: gaaacactgccaccaccaggtcgg  chr3:8809600-8809623  missmatch is:  470
+3 of 28 targets: ccaccaggtcggcgatgctt
+agg  chr3:8809612-8809635  missmatch is:  52
+4 of 28 targets: aggtgcttcatgaagaagaagagg  chr3:8809633-8809656  missmatch is:  1297
+5 of 28 targets: aagaagaggcgcgagtgcttctgg  chr3:8809648-8809671  missmatch is:  140
+6 of 28 targets: ggcgcgagtgcttctggcgtgtgg  chr3:8809655-8809678  missmatch is:  104
+7 of 28 targets: cacgcgttcccgctcagcgccagg  chr3:8809700-8809723  missmatch is:  409
+8 of 28 targets: ttcccgctcagcgccaggagcagg  chr3:8809706-8809729  missmatch is:  258
+9 of 28 targets: accgccacctccacgcgcgccagg  chr3:8809743-8809766  missmatch is:  323
+10 of 28 targets: ccgccacctccacgcgcgccaggg  chr3:8809744-8809767  missmatch is:  373
+11 of 28 targets: cgccagggcctcgttgcgccgcgg  chr3:8809760-8809783  missmatch is:  64
+12 of 28 targets: gccagggcctcgttgcgccgcggg  chr3:8809761-8809784  missmatch is:  100
+13 of 28 targets: agggcctcgttgcgccgcggggg  chr3:8809764-8809787  missmatch is:  73
+14 of 28 targets: ctcgttgcgccgcgggggtccgg  chr3:8809769-8809792  missmatch is:  57
+15 of 28 targets: tggaccaccaccgtcacaaagtcc  chr3:8809597-8809620  missmatch is:  138
+16 of 28 targets: ttcgtagcggctggaccaccacc  chr3:8809609-8809632  missmatch is:  30
+17 of 28 targets: ggattcgtagcggctggaccacc  chr3:8809612-8809635  missmatch is:  27
+18 of 28 targets: cgtggattcgtagcggctggacc  chr3:8809615-8809638  missmatch is:  27
+19 of 28 targets: cgcccttgcgcacacacgacgacc  chr3:8809689-8809712  missmatch is:  48
+20 of 28 targets: taggacgaggaccgcgactcgccc  chr3:8809708-8809731  missmatch is:  7
+21 of 28 targets: gtaggacgaggaccgcgactcgcc  chr3:8809709-8809732  missmatch is:  27
+22 of 28 targets: cgacacagagtaggacgaggacc  chr3:8809719-8809742  missmatch is:  145
+23 of 28 targets: gggaccgcgcgcacctccaccgcc  chr3:8809744-8809767  missmatch is:  185
+24 of 28 targets: tccgggaccgcgcgcacctccacc  chr3:8809747-8809770  missmatch is:  145
+25 of 28 targets: tgctccgggaccgcgcgcacctcc  chr3:8809750-8809773  missmatch is:  136
+26 of 28 targets: cgttgctccgggaccgcgcgcacc  chr3:8809753-8809776  missmatch is:  64
+27 of 28 targets: gggcgccgcgttgctccgggacc  chr3:8809762-8809785  missmatch is:  88
+28 of 28 targets: gcctgggggcgccgcgttgctcc  chr3:8809768-8809791  missmatch is:  151
+1 of 8 targets: caatctgcagctcccacttcctgg  chr3:8790659-8790682  missmatch is:  1420
+2 of 8 targets: gctcccacttcctggcaaccccgg  chr3:8790668-8790691  missmatch is:  614
+3 of 8 targets: tttcacttgcacctttgagactcc  chr3:8790602-8790625  missmatch is:  631
+4 of 8 targets: agactagtagttttcacttgcacc  chr3:8790613-8790636  missmatch is:  538
+5 of 8 targets: aacagaagacgttacatagtacc  chr3:8790638-8790661  missmatch is:  791
+6 of 8 targets: accggccccaacggtccttcaccc  chr3:8790671-8790694  missmatch is:  46
+7 of 8 targets: taccggccccaacggtccttcacc  chr3:8790672-8790695  missmatch is:  34
+8 of 8 targets: atacgtaccggccccaacggtcc  chr3:8790678-8790701  missmatch is:  9
