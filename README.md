@@ -4,7 +4,7 @@ SYNOPSIS: A Perl program to find sgRNA sequences from Fasta or Bed format files.
   
   
 ##### sgRNA (single guide RNA)
-The sgRNA is a 20 nt sequence used in CRISPR-Cas9 system used for targetting. 
+The sgRNA is a 20 nt sequence used in CRISPR-Cas9 system to guide the Cas9 endonuclease to the targeting region. 
 a PAM sequence (NGG for Cas9) should be followed immedaitely after the sgRNA.
   
   
