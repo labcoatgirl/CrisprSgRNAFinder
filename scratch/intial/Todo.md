@@ -2,8 +2,8 @@
 
 
 1. Write the subroutines as individual PM files 
-  * Read_Fasta
-  * Read_Bed_File
-  * Fetch_DNA_from_UCSC
+  * ~~read_fasta~~
+  * read_bed_file
+  * fetch_DNA_from_UCSC
   
 2. 
