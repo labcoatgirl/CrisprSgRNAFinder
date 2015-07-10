@@ -1,4 +1,4 @@
-package fetch_DNA_from_UCSC;
+package FetchDNAfromUCSC;
 
 use strict;
 use vars qw($VERSION);
