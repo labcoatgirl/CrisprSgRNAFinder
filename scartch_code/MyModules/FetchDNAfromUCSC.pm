@@ -8,7 +8,6 @@ use XML::Simple;
 
 $VERSION     = 1.00;
 
-
 sub Parse_UCSC
 {
 	my ($chr,$sta,$end,$genome) = @_;

@@ -8,10 +8,10 @@ use strict;
 use warnings;
 use 5.010;
 use Getopt::Long;
-use LWP::UserAgent;
-use LWP::Simple;
-use XML::Simple;
-use JSON;
+#use LWP::UserAgent;
+#use LWP::Simple;
+#use XML::Simple;
+#use JSON;
 
 # use Pod::Usage;
 use List::Util qw(min max);
@@ -51,17 +51,17 @@ GetOptions (
 ) or die ("\nPlease check the arguments; perl cpfind.pl -h for help\n\n");
 
 defined ($fasta_file or $bed_file or $genome or $mode or $length or $max_number or $help) or &help;
-if (!$fasta_file and !$bed_file){print "\nPlease provide the input file - bed file or fasta file\n\n"} 
+if (!$fasta_file and !$bed_file){print "\nPlease provide the input file (bed or Fasta format)\n\n"} 
 
 
 
 # ==================================
 # = Initialize default Parameters  =
 # ==================================
-$genome     = defined($genome) ? $genome : "hg19";
-$mode       = defined($mode) ? $mode : "s";
-$length     = defined($length) ? $length:20;
-$max_number = defined($max_number) ? $max_number :10;
+$genome     = defined($genome) 		?	$genome 	: 	"hg19";
+$mode       = defined($mode) 		?	$mode 		: 	"s";
+$length     = defined($length) 		?	$length		:	20;
+$max_number = defined($max_number) 	?	$max_number :	10;
 
 
 # ==================================
@@ -73,14 +73,17 @@ if (defined $fasta_file){
 	print colored("Sequence is based on $genome\n", "bold blue");
 	my $seq = readfasta($fasta_file);
 	my $seq_num = scalar(@$seq);
-	print colored("Finish reading $fasta_file\n$seq_num sequence have been read\n", "bold blue");
+	print colored("Finish reading $fasta_file\n$seq_num sequence(s) have been read\n", "bold blue");
+	
 	for my $item (@$seq) 
 	{
 		my $mytargets = detectsgRNA($item);
 		evaluatePAM($mytargets);
 		print "=========================================\n";
 	}
+
 }
+
 
 # ==================================
 # =    Read Bed File if provided   =
@@ -104,15 +107,11 @@ if (defined $bed_file){
 
 
 
-
 # ================================
 # ==== Detect PAM sequences =====
 # ================================
 # detectPAM receive sequence and chromosome positions 
 # and returns an array of hash
-
-
-
 
 sub detectsgRNA
 {
