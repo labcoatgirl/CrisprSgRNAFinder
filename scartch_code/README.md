@@ -7,7 +7,7 @@
   * ~~fetch_DNA_from_UCSC~~
   * ~~make a script and test the functions from the PM file~~
   * write detailed annoteation for each PM file
-  * DNAStuff module (complementary; DNA->RNA; and .... )
+  * ~~DNAStuff module (complementary; DNA->RNA; and .... )~~
   
 2. Write the function to scan the sequence and return a list of sgRNA (20 nt) and its PAM 
   * Make the option to scan "plus" or "minus" or "both" strands 
