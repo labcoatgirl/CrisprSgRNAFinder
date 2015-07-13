@@ -1,11 +1,16 @@
-package read_fasta;
+package MyModules::ReadFasta;
 
 use strict;
 use vars qw($VERSION);
+use base 'Exporter';
+use Term::ANSIColor;
 
 $VERSION     = 1.00;
 
-sub readfasta 
+our @EXPORT_OK = qw/ReadFasta/;
+
+
+sub ReadFasta 
 {
     (my $file)= shift;
 	my %sequence;
@@ -37,7 +42,7 @@ sub readfasta
 	
 	# Reformat the sequences and make an array of array format 
 	
-	my @AoA;
+	my @AoH;
 	foreach my $k (sort keys %sequence) {
 		my ($chr,$sta,$end);
 		if ($k =~ /.*(chr\w+):(\d+)-(\d+)/g ){
@@ -48,15 +53,13 @@ sub readfasta
 					$chr = "0" ;
 					$sta = "0" ;
 					$end = "0" ;
-			}
-#		print "$sequence{$k} $chr $sta $end \n"; 
-		push @AoA, [$sequence{$k},$chr,$sta,$end] 
-		
+			}			
+		push @AoH,  { seq => $sequence{$k}, chr => $chr, start => $sta, end => $end};	
 	}
 	
 	undef %sequence;
 	
-	return \@AoA;
+	return \@AoH;
 }
 
 1;

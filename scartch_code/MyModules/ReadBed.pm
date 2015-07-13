@@ -1,15 +1,21 @@
-package ReadBed;
+package MyModules::ReadBed;
 
 use strict;
+use lib '..';
 use vars qw($VERSION);
+
+use MyModules::FetchDNAfromUCSC qw/GetDNA_from_UCSC/;
 
 $VERSION     = 1.00;
 
+use base 'Exporter';
+our @EXPORT_OK = qw/ReadBed/;
 
-sub readbed 
+
+sub ReadBed
 {
-	my $file = shift;
-	my @AoA;
+	my ($file,$genome) = @_;
+	my @AoH;
 	open (IN, "<$file") or die "couldn't open the file $file $!";
 	while (<IN>)
 	{	
@@ -22,13 +28,11 @@ sub readbed
 		next if /^\s*$/;  #skip empty line 
 		next unless /^chr.*/; 
 		my @bedcolumns = split(/\s+/, $_);
-#		print $bedcolumns[0],$bedcolumns[1],$bedcolumns[2];
-		my $seq= Parse_UCSC($bedcolumns[0],$bedcolumns[1],$bedcolumns[2]);
-		push @AoA, [$seq,$bedcolumns[0],$bedcolumns[1],$bedcolumns[2]] 
-#		print $bedcolumns[0];
+		my $seq= GetDNA_from_UCSC($bedcolumns[0],$bedcolumns[1],$bedcolumns[2],$genome);
+		push @AoH, { seq => $seq, chr => $bedcolumns[0], start => $bedcolumns[1], end => $bedcolumns[2]};
+			
 	}
-	
-	return \@AoA;
+	return \@AoH; # return array of hash 
 }
 
 1;

@@ -1,14 +1,16 @@
-package FetchDNAfromUCSC;
+package MyModules::FetchDNAfromUCSC;
 
 use strict;
 use vars qw($VERSION);
-#use LWP::UserAgent;
-#use LWP::Simple;
+use base 'Exporter';
+use LWP::Simple qw/get/;
 use XML::Simple;
 
-$VERSION     = 1.00;
+$VERSION = 1.00;
 
-sub Parse_UCSC
+our @EXPORT_OK = qw/GetDNA_from_UCSC/;
+
+sub GetDNA_from_UCSC
 {
 	my ($chr,$sta,$end,$genome) = @_;
 	my ($link) ="http://genome.ucsc.edu/cgi-bin/das/"."$genome"."/dna?segment=$chr:$sta,$end";
