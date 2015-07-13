@@ -3,6 +3,10 @@ use MyModules::FetchDNAfromUCSC qw/GetDNA_from_UCSC/;
 use MyModules::ReadBed qw/ReadBed/;
 use MyModules::ReadFasta qw/ReadFasta/;
 use MyModules::DNAStuff qw/GetReverseComplementary  GetGCPercentage/;
+
+use MyModules::ListAllsgRNA qw/ListAllsgRNA/;
+
+
 use Term::ANSIColor;
 
 
@@ -22,6 +26,8 @@ for my $item (@$seq_fasta)
 	print $$item{start}."\t";
 	print $$item{end}."\t";
 	print $$item{seq}."\n";
+	
+	print ListAllsgRNA($item);
 }
 
 	
@@ -44,7 +50,9 @@ for my $item (@$seq_bed)
 	print $$item{seq}."\n";
 	my $sequence = $$item{seq};
 	print GetReverseComplementary($sequence)."\t";
-	print GetGCPercentage($sequence)."\n"
+	print GetGCPercentage($sequence)."\n";
+	
+	
 	
 }
 
