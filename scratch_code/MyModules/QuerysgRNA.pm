@@ -33,4 +33,7 @@ my $query_data = $query_json->decode( $query_response->content() );
 my $total_count=$query_data->{'summary'}[0]{'count'}+$query_data->{'summary'}[1]{'count'};
 return $total_count;
 
+
+#Try to add a more precise function to test whether the sequence follow a NGG
+
 }
