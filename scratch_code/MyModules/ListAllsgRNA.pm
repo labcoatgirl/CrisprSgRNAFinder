@@ -137,9 +137,10 @@ sub ListAllsgRNA
 	
 	foreach (@sgRNAs_temp) 
 	{
-	my $current_seq = $_ ->{"guide_seq"}; 
-	my $current_pam_seq = $_ ->{"PAMseq"};
-	my $current_gc = GetGCPercentage($current_seq);
+	my $current_seq 	  = $_ ->{"guide_seq"}; 
+	my $current_pam_seq   = $_ ->{"PAMseq"};
+	my $current_gc		  = GetGCPercentage($current_seq);
+	$_ ->{"GCpencentage"} = $current_gc;
 #	print "current sequence is $current_seq $current_pam_seq $unique_check{$current_seq}  $current_gc\n";
 	next if $unique_check{$current_seq} > 1;
 	
