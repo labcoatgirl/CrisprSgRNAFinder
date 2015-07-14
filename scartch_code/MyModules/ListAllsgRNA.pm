@@ -73,7 +73,6 @@ sub ListAllsgRNA
 		if ($guideseq_sta >= $chr_sta)
 		{
 			my $guideseq			=	substr($seq, $guideseq_sta-$chr_sta, $guidesequence_length);
-			print $guideseq."\n";
 			my $guideseq_plus_PAM 	=	substr($seq, $guideseq_sta-$chr_sta, $guidesequence_length+3);
 			my $PAMseq 				=	substr($seq, $guideseq_end-$chr_sta+1, 3);
 			
@@ -140,7 +139,8 @@ sub ListAllsgRNA
 	{
 	my $current_seq = $_ ->{"guide_seq"}; 
 	my $current_pam_seq = $_ ->{"PAMseq"};
-	print "current sequence is $current_seq $current_pam_seq \n";
+	my $current_gc = GetGCPercentage($current_seq);
+	print "current sequence is $current_seq $current_pam_seq $unique_check{$current_seq}  $current_gc\n";
 	next if $unique_check{$current_seq} > 1;
 	next if GetGCPercentage($current_seq) < 40;
 	next if GetGCPercentage($current_seq) > 60;
@@ -150,6 +150,6 @@ sub ListAllsgRNA
 	
 	undef(@sgRNAs_temp);
 	
-	return \@sgRNAs_final;
+	return @sgRNAs_final;
 }
 
