@@ -6,6 +6,9 @@ use MyModules::DNAStuff qw/GetReverseComplementary  GetGCPercentage/;
 
 use MyModules::ListAllsgRNA qw/ListAllsgRNA/;
 
+use Data::Dumper;
+
+
 
 use Term::ANSIColor;
 
@@ -14,7 +17,7 @@ use Term::ANSIColor;
 # ----------------------------------------------------------------------
 # Test ReadFasta Function
 # ----------------------------------------------------------------------
-my $fasta_file = "test_input_1.fasta";
+my $fasta_file = "test_input_0.fasta";
 
 my $seq_fasta = ReadFasta($fasta_file);
 my $seq_num = scalar(@$seq_fasta);
@@ -27,7 +30,7 @@ for my $item (@$seq_fasta)
 	print $$item{end}."\t";
 	print $$item{seq}."\n";
 	
-	print ListAllsgRNA($item);
+	print Dumper ListAllsgRNA($item);
 }
 
 	

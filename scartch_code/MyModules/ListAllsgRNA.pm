@@ -16,16 +16,14 @@ our @EXPORT_OK = qw/ListAllsgRNA/;
 sub ListAllsgRNA
 {
 	my $input = shift;
-	
-	
 	my $seq  = $$input{seq};
 	my $chr	 = $$input{chr};
 	my $chr_sta = $$input{start};
 	my $chr_end = $$input{end};
 	
+	print "HAHAHA $seq $chr $chr_sta $chr_end\n";
 	
-	
-	my ($seq,$chr,$chr_sta,$chr_end,$type) = @_;
+
 	
 	my $guidesequence_length = 20; 
 	
@@ -34,7 +32,7 @@ sub ListAllsgRNA
 	my %unique_check;
 	
 	
-	while ($seq =~ /(?=gg)/gi) #First process + strand 
+	while ($seq =~ /(?=GG)/gi) #First process + strand 
 	{  	
 		# An illustration for sgRNA position 
 		# positions and sequences are as shown below:
@@ -74,9 +72,10 @@ sub ListAllsgRNA
 
 		if ($guideseq_sta >= $chr_sta)
 		{
-			my $guideseq			=	substr($seq, $guideseq_sta  , $guidesequence_length);
-			my $guideseq_plus_PAM 	=	substr($seq, $guideseq_sta  , $guidesequence_length+3);
-			my $PAMseq 				=	substr($seq, $guideseq_end+1, 3);
+			my $guideseq			=	substr($seq, $guideseq_sta-$chr_sta, $guidesequence_length);
+			print $guideseq."\n";
+			my $guideseq_plus_PAM 	=	substr($seq, $guideseq_sta-$chr_sta, $guidesequence_length+3);
+			my $PAMseq 				=	substr($seq, $guideseq_end-$chr_sta+1, 3);
 			
 			my $temp_target;			
 			$temp_target ->{"chr"} 					= $chr;
@@ -95,7 +94,7 @@ sub ListAllsgRNA
 	}	
 	
 	
-	while ($seq =~ /(?=cc)/gi) #Next process the minus strand
+	while ($seq =~ /(?=CC)/gi) #Next process the minus strand
 	{  	
 		# 12 - 13 - 14 -15-16- 17 -18 - 19
 		# 0  - 1  - 2 - 3 - 4 - 5 - 6 - 7 
@@ -109,9 +108,9 @@ sub ListAllsgRNA
 		
 		if ($guideseq_sta  <= length($seq) -1 )
 		{
-			my $guideseq			=	substr($seq, $guideseq_end  		, $guidesequence_length);
-			my $guideseq_plus_PAM 	=	substr($seq, $guideseq_plus_PAM_end	, $guidesequence_length+3);
-			my $PAMseq 				=	substr($seq, $guideseq_plus_PAM_end	, 3);
+			my $guideseq			=	substr($seq, $guideseq_end-$chr_sta , $guidesequence_length);
+			my $guideseq_plus_PAM 	=	substr($seq, $guideseq_plus_PAM_end-$chr_sta, $guidesequence_length+3);
+			my $PAMseq 				=	substr($seq, $guideseq_plus_PAM_end-$chr_sta, 3);
 			
 			
 			$guideseq 				= 	GetReverseComplementary($guideseq);
@@ -137,14 +136,16 @@ sub ListAllsgRNA
 	
 	
 	
-	for each $item (@sgRNAs_temp) 
+	foreach (@sgRNAs_temp) 
 	{
-	my $current_seq = $item{seq}; 
+	my $current_seq = $_ ->{"guide_seq"}; 
+	my $current_pam_seq = $_ ->{"PAMseq"};
+	print "current sequence is $current_seq $current_pam_seq \n";
 	next if $unique_check{$current_seq} > 1;
 	next if GetGCPercentage($current_seq) < 40;
 	next if GetGCPercentage($current_seq) > 60;
 	
-	push @sgRNAs_final, $item;
+	push @sgRNAs_final, $_;
 	}
 	
 	undef(@sgRNAs_temp);

@@ -20,8 +20,9 @@ sub GetReverseComplementary {
 sub GetGCPercentage {
 	my ($sequence) = shift;
     my $sequencelength = length $sequence;
+	print "the length is  $sequencelength";
     my $GCcount = $sequence =~ tr/GC//;
-    my $GCpercentage = $GCcount/$sequencelength;
+    my $GCpercentage = $GCcount/($sequencelength+1);
 	return $GCpercentage;
 }
 
