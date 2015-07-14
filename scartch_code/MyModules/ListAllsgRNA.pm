@@ -129,6 +129,9 @@ sub ListAllsgRNA
 	}		# End of While Loop
 	
 	
+	# ----------------------------------------------------------------------
+	# Filter out guide sequences that are redundant or with low GC / high GC
+	# ---------------------------------------------------------------------- 
 	
 	foreach (@sgRNAs_temp) 
 	{
