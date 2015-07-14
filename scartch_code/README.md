@@ -11,8 +11,8 @@
   
 2. Write the function to scan the sequence and return a list of sgRNA (20 nt) and its PAM 
   * Make the option to scan "plus" or "minus" or "both" strands 
-  * Make the option to select top N sequences
-  * Calculate the GC contents (use GetGCPercentage function from DNAStuff module)
+  * ~~Make the option to select top N sequences~~
+  * ~~Calculate the GC contents (use GetGCPercentage function from DNAStuff module)~~
 
 3. Write the function to evaluate the sgRNA sequence 
   * Query GGGenome (without miss-match) -> get perfect match sequence number 
