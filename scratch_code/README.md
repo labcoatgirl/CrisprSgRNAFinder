@@ -15,5 +15,7 @@
   * ~~Calculate the GC contents (use GetGCPercentage function from DNAStuff module)~~
 
 3. Write the function to evaluate the sgRNA sequence 
-  * Query GGGenome (without miss-match) -> get perfect match sequence number 
+  * How to update via the reference of the Array of Hash?
+  * write the module to Query GGGenome (without miss-match) 
+  * 
   
