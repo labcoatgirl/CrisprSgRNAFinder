@@ -1,0 +1,46 @@
+{
+    "database": "Human genome, GRCh37/hg19 (Feb, 2009)",
+    "error": "none",
+    "results": [
+        {
+            "name": "chr4",
+            "position": 104979962,
+            "position_end": 104979981,
+            "snippet": "GCTTTCTCTGTTGATCCCTTGGAGAAGACATACAAGTAAGTCCTCTCTAGAGTTAAAACAAAAAAGTAAAAGACAAGGAATAACAATGGGTAAATATAAGGGTGGTGGCAGTGTTTCAGGAGGTAAAACAAAGCATAGAGTTTTTGAGAGGAGATGAAGTATCATCTCATAAATTGTATATCAGGGAAGGCACTAGAGTGCTCCCCCTCAGCAAGATGGC",
+            "snippet_end": 104980081,
+            "snippet_pos": 104979862,
+            "strand": "+"
+        },
+        {
+            "name": "chr1",
+            "position": 31465133,
+            "position_end": 31465152,
+            "snippet": "GGTGGCCTCTTGCCAGTGACCTCAGCATAGGGACCAGCTTCATGAGGGGACTCTGTAAACCTACATCACTAACAGGTTCACAAGGGCTAGCTATGGATAGCCTGAAACAATGCCACCACCTCCCCCATCCCCCCATTCTTAATTACTTGAACAACGTGCTGGCTGGAGGGAGAGTAGAGAGGGTGACAGAGACACACACAGTACCTGTTGTTGAGAATTG",
+            "snippet_end": 31465252,
+            "snippet_pos": 31465033,
+            "strand": "-"
+        },
+        {
+            "name": "chr3",
+            "position": 8809597,
+            "position_end": 8809616,
+            "snippet": "GAGGCGAACATGCCCACCACCTGCAAGTACTTGACCAGGCGGCACAGCAGGTCGGGCCCGTAGAAGCGGAAGGTGATGTCCCACAGCAACTGCGGCAGCACCTGAAACACTGCCACCACCAGGTCGGCGATGCTTAGGTGCTTCATGAAGAAGAAGAGGCGCGAGTGCTTCTGGCGTGTGGTGCGCAGCGCCAGCAGCACACACGCGTTCCCGCTCAGCG",
+            "snippet_end": 8809716,
+            "snippet_pos": 8809497,
+            "strand": "-"
+        }
+    ],
+    "summary": [
+        {
+            "count": 1,
+            "count_is_approx": false,
+            "query": "GGTGGTGGCAGTGTTTCAGG"
+        },
+        {
+            "count": 2,
+            "count_is_approx": false,
+            "query": "CCTGAAACACTGCCACCACC"
+        }
+    ],
+    "time": "2015-07-14 23:15:53"
+}
