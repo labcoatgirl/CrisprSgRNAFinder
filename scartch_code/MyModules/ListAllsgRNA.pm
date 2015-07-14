@@ -105,12 +105,11 @@ sub ListAllsgRNA
 		my $guideseq_plus_PAM_end 	= $chr_sta + pos($seq) ;
 		
 		
-		if ($guideseq_sta  <= length($seq) -1 )
+		if ($guideseq_sta  <= $chr_sta + length($seq) -1 )
 		{
 			my $guideseq			=	substr($seq, $guideseq_end-$chr_sta , $guidesequence_length);
 			my $guideseq_plus_PAM 	=	substr($seq, $guideseq_plus_PAM_end-$chr_sta, $guidesequence_length+3);
 			my $PAMseq 				=	substr($seq, $guideseq_plus_PAM_end-$chr_sta, 3);
-			
 			
 			$guideseq 				= 	GetReverseComplementary($guideseq);
 			$guideseq_plus_PAM		=	GetReverseComplementary($guideseq_plus_PAM);
@@ -142,10 +141,11 @@ sub ListAllsgRNA
 	my $current_gc = GetGCPercentage($current_seq);
 	print "current sequence is $current_seq $current_pam_seq $unique_check{$current_seq}  $current_gc\n";
 	next if $unique_check{$current_seq} > 1;
-	next if GetGCPercentage($current_seq) < 40;
-	next if GetGCPercentage($current_seq) > 60;
+#	next if $current_gc le 40;
+#	next if $current_gc > 60;
 	
 	push @sgRNAs_final, $_;
+	
 	}
 	
 	undef(@sgRNAs_temp);
