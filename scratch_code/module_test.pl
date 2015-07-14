@@ -34,9 +34,15 @@ for my $item (@$seq_fasta)
 	foreach (@sgRNA_list)
 	{
 		my $guide_seq = $_ ->{guide_seq};
+		my $pam_seq   = $_ ->{PAMseq};
 		my $query_out = QuerysgRNA($guide_seq,1,$genome);
-		print "1 match number for $guide_seq is $query_out\n";
-	
+		print "1 match number for $guide_seq $pam_seq is $query_out\n";
+		
+		my $query_out = QuerysgRNA($guide_seq,2,$genome);
+		print "2 match number for $guide_seq $pam_seq is $query_out\n";
+		
+		my $query_out = QuerysgRNA($guide_seq,3,$genome);
+		print "3 match number for $guide_seq $pam_seq is $query_out\n";
 	}
 }
 
@@ -69,9 +75,6 @@ for my $item (@$seq_bed)
 	print $item->{start}."\t";
 	print $item->{end}."\t";
 	print $item->{seq}."\n";
-	my $sequence = $item->{seq};
-	
-	
-	
+	my $sequence = $item->{seq};	
 }
 
