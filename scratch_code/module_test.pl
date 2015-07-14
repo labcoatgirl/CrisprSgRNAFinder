@@ -30,7 +30,15 @@ for my $item (@$seq_fasta)
 	print $$item{end}."\t";
 	print $$item{seq}."\n";
 	
-	print Dumper ListAllsgRNA($item);
+	my @sgRNA_list = ListAllsgRNA($item);
+	foreach (@sgRNA_list) 
+	{
+		foreach my $key (sort keys($_)){
+			print $_ ->{$key}."\t";
+		}
+		print "\n";
+	}
+
 }
 
 	
