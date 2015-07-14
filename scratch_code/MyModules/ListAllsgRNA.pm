@@ -13,6 +13,7 @@ our @EXPORT_OK = qw/ListAllsgRNA/;
 sub ListAllsgRNA
 {
 	my $input = shift;
+	my $scan_type = shift;
 	my $seq  = $$input{seq};
 	my $chr	 = $$input{chr};
 	my $chr_sta = $$input{start};
@@ -27,7 +28,7 @@ sub ListAllsgRNA
 	my @sgRNAs_final; 
 	my %unique_check;
 	
-	
+	if ($scan_type eq "plus" or $scan_type eq "both"){
 	while ($seq =~ /(?=GG)/gi) #First process + strand 
 	{  	
 		# An illustration for sgRNA position 
@@ -86,9 +87,10 @@ sub ListAllsgRNA
 			push @sgRNAs_temp, $temp_target;	# Create a temporary Array of Hash
 		} 		
 	
-	}	
+	}	#end of while loop
+	}
 	
-	
+	if ($scan_type eq "minus" or $scan_type eq "both"){
 	while ($seq =~ /(?=CC)/gi) #Next process the minus strand
 	{  	
 		# 12 - 13 - 14 -15-16- 17 -18 - 19
@@ -127,7 +129,7 @@ sub ListAllsgRNA
 			# ----------------------------------------------------------------------
 		} 	# End of if Loop
 	}		# End of While Loop
-	
+	}
 	
 	# ----------------------------------------------------------------------
 	# Filter out guide sequences that are redundant or with low GC / high GC

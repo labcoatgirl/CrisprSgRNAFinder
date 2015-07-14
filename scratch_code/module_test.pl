@@ -30,7 +30,7 @@ for my $item (@$seq_fasta)
 	print $$item{end}."\t";
 	print $$item{seq}."\n";
 	
-	my @sgRNA_list = ListAllsgRNA($item);
+	my @sgRNA_list = ListAllsgRNA($item,"minus");
 	foreach (@sgRNA_list) 
 	{
 		foreach my $key (sort keys($_)){
@@ -38,6 +38,7 @@ for my $item (@$seq_fasta)
 		}
 		print "\n";
 	}
+
 
 }
 
