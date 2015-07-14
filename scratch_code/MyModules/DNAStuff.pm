@@ -21,7 +21,7 @@ sub GetGCPercentage {
 	my ($sequence) = shift;
     my $sequencelength = length $sequence;
     my $GCcount = $sequence =~ tr/GC//;
-    my $GCpercentage = $GCcount/($sequencelength+1);
+    my $GCpercentage = ($GCcount+0.0)/($sequencelength+0.0);
 	return $GCpercentage;
 }
 

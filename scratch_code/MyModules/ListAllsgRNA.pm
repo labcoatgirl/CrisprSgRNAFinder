@@ -18,8 +18,8 @@ sub ListAllsgRNA
 	my $chr_sta = $$input{start};
 	my $chr_end = $$input{end};
 	
-	my $lower_gc_threshold = 40.0;
-	my $upper_gc_threshold = 60.0;
+	my $lower_gc_threshold = 0.4;
+	my $upper_gc_threshold = 0.6;
 	
 	my $guidesequence_length = 20; 
 	
@@ -138,11 +138,11 @@ sub ListAllsgRNA
 	my $current_seq = $_ ->{"guide_seq"}; 
 	my $current_pam_seq = $_ ->{"PAMseq"};
 	my $current_gc = GetGCPercentage($current_seq);
-	print "current sequence is $current_seq $current_pam_seq $unique_check{$current_seq}  $current_gc\t";
+#	print "current sequence is $current_seq $current_pam_seq $unique_check{$current_seq}  $current_gc\n";
 	next if $unique_check{$current_seq} > 1;
 	
-	print "Bingo bigger \n" if $current_gc < $lower_gc_threshold;
-	print "Bingo lesser \n" if $current_gc > $upper_gc_threshold;
+	next if $current_gc < $lower_gc_threshold;
+	next if $current_gc > $upper_gc_threshold;
 	
 	push @sgRNAs_final, $_;
 	
