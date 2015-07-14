@@ -9,7 +9,7 @@
   * write detailed annoteation for each PM file
   * ~~DNAStuff module (complementary; DNA->RNA; and .... )~~
   
-2. ~~Write the function to scan the sequence and return a list of sgRNA (20 nt) and its PAM ~~
+2. ~~Write the function to scan the sequence and return a list of sgRNA (20 nt) and its PAM~~
   * ~~Make the option to scan "plus" or "minus" or "both" strands~~
   * ~~Make the option to select top N sequences~~
   * ~~Calculate the GC contents (use GetGCPercentage function from DNAStuff module)~~
