@@ -1,8 +1,19 @@
 
+package MyModules::DiffCompare;
+
+use strict;
+use vars qw($VERSION);
+use base 'Exporter';
+
+$VERSION     = 1.00;
+
+our @EXPORT_OK = qw/DiffCompare/;
+
+
 my ($seq1, $seq2) = @ARGV;
 use Data::Dumper;
 
-sub diff_compare{
+sub DiffCompare{
 my $seq1 = $_[0]; # The first sequence is expected to be the sgRNA 
 my $seq2 = $_[1]; # The second sequence is expected to be the one with missmatch to designed sgRNA
 
@@ -104,8 +115,8 @@ while (1) {
 
 $align1 = reverse $align1;
 $align2 = reverse $align2;
-print "$align1\n";
-print "$align2\n";
+#print "$align1\n";
+#print "$align2\n";
 
 my @missmatch_positions ;
 my @missmatch_type;
@@ -131,10 +142,11 @@ foreach (0..length($align2)-1)
 
 }
 
-print Dumper (@missmatch_positions)."\n";
-print Dumper (@missmatch_type)."\n";
+#print Dumper (@missmatch_positions)."\n";
+#print Dumper (@missmatch_type)."\n";
+return @missmatch_positions;
 
 }
 
-diff_compare($seq1, $seq2);
+1;
 

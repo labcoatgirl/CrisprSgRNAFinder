@@ -9,7 +9,7 @@ use LWP::Simple;
 use JSON;
 use 5.010;
 use MyModules::DNAStuff qw/GetReverseComplementary  GetGCPercentage/;
-
+use MyModules::DiffCompare qw/DiffCompare/;
 
 $VERSION     = 1.00;
 our @EXPORT_OK = qw/QuerysgRNA/;
@@ -37,6 +37,7 @@ my $results = $query_data->{'results'};
 
 
 my $true_count;
+my $high_risk_count;
 
 foreach my $item( @$results) { 
 	
@@ -51,7 +52,16 @@ foreach my $item( @$results) {
 		
 		# say "$guideseq $pam";
 		
-		$true_count ++ if $pam =~/.GG/;
+		if ($pam =~/.GG/){
+			$true_count ++;
+			my @array = DiffCompare($target_sequence,$guideseq);
+			my $riskflag = 1; 
+			foreach (@array){
+				if ($_ > 8){$riskflag= undef}
+			}
+			if($riskflag){$high_risk_count ++}
+			
+		}
 		
     }elsif ($item->{strand} eq "-"){ 
 		# say "I am minus";
@@ -62,7 +72,15 @@ foreach my $item( @$results) {
 		my $guideseq			=	GetReverseComplementary (substr($item->{snippet}, $guide_seq_sta, $guide_seq_len ));
 		my $pam					=   GetReverseComplementary (substr($item->{snippet}, $guide_seq_sta-3, 3));
 		# say "$guideseq $pam";
-		$true_count ++ if $pam =~/.GG/;
+		if ($pam =~/.GG/){
+			$true_count ++;
+			my @array = DiffCompare($target_sequence,$guideseq);
+			my $riskflag = 1; 
+			foreach (@array){
+				if ($_ > 8){$riskflag= undef}
+			}
+			if($riskflag){$high_risk_count ++}	
+		}
     }
 	
 	
@@ -70,9 +88,17 @@ foreach my $item( @$results) {
     # fields are in $item->{Year}, $item->{Quarter}, etc.
 }
 
+$total_count = $total_count-1;
+$true_count  = $true_count-1;
+if ($high_risk_count >=1){
+	$high_risk_count = $high_risk_count-1;
+}else{
+	$high_risk_count =0
+	
+}
 
 # say "true count is $true_count --over";
-return "total matched count is $total_count and followed by NGG is $true_count";
+return "total mismatch count is $total_count | followed by NGG is $true_count| highrisk $high_risk_count";
 
 #Try to add a more precise function to test whether the sequence follow a NGG
 
