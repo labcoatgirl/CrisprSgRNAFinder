@@ -88,19 +88,21 @@ for my $item (@$seq_bed)
 		print "1 mismatch allowed: ";
 		print colored($guide_seq,"bright_green");
 		print colored($pam_seq,"red");
-		print " is $query_out\n";
+		print " $query_out\n";
 
 		my $query_out = QuerysgRNA($guide_seq,2,$genome);
 		print "2 mismatch allowed: ";
 		print colored($guide_seq,"bright_green");
 		print colored($pam_seq,"red");
-		print " is $query_out\n";
+		print " $query_out\n";
 		
 		my $query_out = QuerysgRNA($guide_seq,3,$genome);
 		print "3 mismatch allowed: ";
 		print colored($guide_seq,"bright_green");
 		print colored($pam_seq,"red");
-		print " is $query_out\n";
+		print " $query_out\n";
+		
+		print "----------------------------------------------------------------------------------------------------------------------------------\n";
 		
 	}
 	
