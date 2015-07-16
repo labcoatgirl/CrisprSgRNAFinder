@@ -17,5 +17,8 @@
 3. Write the function to evaluate the sgRNA sequence 
   * ~~How to update via the reference of the Array of Hash?~~
   * ~~write the module to Query GGGenome (without miss-match)~~ 
-  * 
+  * calcualte the mismatch position by comparing with the original sequence
+  * tell the mismatch type (e.g: deletion, insertion, mismatch)
+  * return high-risk mismatch sequence number
+  * examine the high-risk mismatch sequence's location (e.g: exon; intron; intergenic)
   
