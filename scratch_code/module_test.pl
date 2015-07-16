@@ -85,13 +85,23 @@ for my $item (@$seq_bed)
 		my $guide_seq = $_ ->{guide_seq};
 		my $pam_seq   = $_ ->{PAMseq};
 		my $query_out = QuerysgRNA($guide_seq,1,$genome);
-		print "1 match number for $guide_seq $pam_seq is $query_out\n";
+		print "1 mismatch allowed: ";
+		print colored($guide_seq,"bright_green");
+		print colored($pam_seq,"red");
+		print " is $query_out\n";
 
 		my $query_out = QuerysgRNA($guide_seq,2,$genome);
-		print "2 match number for $guide_seq $pam_seq is $query_out\n";
-
+		print "2 mismatch allowed: ";
+		print colored($guide_seq,"bright_green");
+		print colored($pam_seq,"red");
+		print " is $query_out\n";
+		
 		my $query_out = QuerysgRNA($guide_seq,3,$genome);
-		print "3 match number for $guide_seq $pam_seq is $query_out\n";
+		print "3 mismatch allowed: ";
+		print colored($guide_seq,"bright_green");
+		print colored($pam_seq,"red");
+		print " is $query_out\n";
+		
 	}
 	
 }
