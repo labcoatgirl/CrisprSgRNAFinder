@@ -98,9 +98,9 @@ if ($high_risk_count >=1){
 }
 
 # say "true count is $true_count --over";
-return "total mismatch count is $total_count | followed by NGG is $true_count| highrisk $high_risk_count";
-
+# return "total mismatch sequence count is $total_count | followed by NGG is $true_count| highrisk $high_risk_count";
+my $final_out = sprintf("total mismatch sequence count is %4s | followed by NGG is %4s | highrisk %4s",$total_count,$true_count,$high_risk_count);
 #Try to add a more precise function to test whether the sequence follow a NGG
-
+return $final_out;
 
 }
