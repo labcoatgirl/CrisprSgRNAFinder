@@ -1,5 +1,20 @@
-# get sequences from command line
+
 my ($seq1, $seq2) = @ARGV;
+use Data::Dumper;
+
+sub diff_compare{
+my $seq1 = $_[0]; # The first sequence is expected to be the sgRNA 
+my $seq2 = $_[1]; # The second sequence is expected to be the one with missmatch to designed sgRNA
+
+
+# ----------------------------------------------------------------------
+# Needleman-Wunsch Algorithm
+#
+# Code from: Korf I, Yandell M, Bedell J. BLAST. O'Reilly (2003)
+# p.44 Example 3-1. Trace-back with Needleman-Wunsch algorithm
+# Download Example Code: http://examples.oreilly.com/9780596002992/
+# ----------------------------------------------------------------------
+
 
 # scoring scheme
 my $MATCH    =  1; # +1 for letters that match
@@ -91,3 +106,35 @@ $align1 = reverse $align1;
 $align2 = reverse $align2;
 print "$align1\n";
 print "$align2\n";
+
+my @missmatch_positions ;
+my @missmatch_type;
+my $base_position =1;
+
+foreach (0..length($align2)-1)
+{
+	if (substr($align1,$_,1) eq substr($align2,$_,1) )
+	{	$base_position++;
+		next; 
+	}elsif(substr($align1,$_,1) eq '-')
+	{	push @missmatch_positions,$base_position;
+		push @missmatch_type,"insertion";
+	}elsif(substr($align2,$_,1) eq '-')
+	{	push @missmatch_positions,$base_position;
+		push @missmatch_type,"deletion";
+		$base_position++;
+	}else{
+		push @missmatch_positions,$base_position;
+		push @missmatch_type,"mismatch";
+		$base_position++;
+	}
+
+}
+
+print Dumper (@missmatch_positions)."\n";
+print Dumper (@missmatch_type)."\n";
+
+}
+
+diff_compare($seq1, $seq2);
+
