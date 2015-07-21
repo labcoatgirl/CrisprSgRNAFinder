@@ -20,5 +20,6 @@
   * ~~calcualte the mismatch position by comparing with the original sequence~~
   * ~~tell the mismatch type (e.g: deletion, insertion, mismatch)~~
   * ~~return high-risk mismatch sequence number~~
+  * Create rigorous test data; (100bp-200bp will be fine); compare with other software
   * examine the high-risk mismatch sequence's location (e.g: exon; intron; intergenic)
   
