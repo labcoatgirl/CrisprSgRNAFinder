@@ -1,4 +1,6 @@
+
 use strict;
+use lib '..';
 use Data::Dumper;
 use Term::ANSIColor;
 
@@ -62,7 +64,7 @@ print colored("Finish reading $fasta_file\n$seq_num sequence(s) have been read\n
 # Test ReadBed module and DNAStuff module
 # ----------------------------------------------------------------------	
 	
-my $bed_file = "test_input_3.bed";
+my $bed_file = "test_input_2.bed";
 my $genome ="hg19";
 
 my $seq_bed = ReadBed($bed_file,$genome);
