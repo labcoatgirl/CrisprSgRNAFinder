@@ -1,0 +1,120 @@
+1 mismatch allowed: AATCTGCAGCTCCCACTTCCTGG total mismatch sequence count is    4 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: AATCTGCAGCTCCCACTTCCTGG total mismatch sequence count is  146 | followed by NGG is   15 | highrisk    1
+3 mismatch allowed: AATCTGCAGCTCCCACTTCCTGG total mismatch sequence count is 3052 | followed by NGG is  234 | highrisk    5
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: CTCCCACTTCCTGGCAACCCCGG total mismatch sequence count is    5 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: CTCCCACTTCCTGGCAACCCCGG total mismatch sequence count is  125 | followed by NGG is    8 | highrisk    1
+3 mismatch allowed: CTCCCACTTCCTGGCAACCCCGG total mismatch sequence count is 2922 | followed by NGG is  196 | highrisk    6
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: GGCAACCCCGGCCATGCATATGG total mismatch sequence count is    0 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: GGCAACCCCGGCCATGCATATGG total mismatch sequence count is    9 | followed by NGG is    1 | highrisk    0
+3 mismatch allowed: GGCAACCCCGGCCATGCATATGG total mismatch sequence count is  305 | followed by NGG is   10 | highrisk    0
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: GTAAACAAGTCTGAAACTGTAGG total mismatch sequence count is    2 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: GTAAACAAGTCTGAAACTGTAGG total mismatch sequence count is   77 | followed by NGG is    8 | highrisk    1
+3 mismatch allowed: GTAAACAAGTCTGAAACTGTAGG total mismatch sequence count is 2375 | followed by NGG is   92 | highrisk    2
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: TAAACAAGTCTGAAACTGTAGGG total mismatch sequence count is    4 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: TAAACAAGTCTGAAACTGTAGGG total mismatch sequence count is  108 | followed by NGG is    6 | highrisk    2
+3 mismatch allowed: TAAACAAGTCTGAAACTGTAGGG total mismatch sequence count is 3626 | followed by NGG is  103 | highrisk    2
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: AAGTCTGAAACTGTAGGGAAAGG total mismatch sequence count is    4 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: AAGTCTGAAACTGTAGGGAAAGG total mismatch sequence count is  114 | followed by NGG is    3 | highrisk    1
+3 mismatch allowed: AAGTCTGAAACTGTAGGGAAAGG total mismatch sequence count is 2557 | followed by NGG is  127 | highrisk    1
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: TCTGAAACTGTAGGGAAAGGTGG total mismatch sequence count is    4 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: TCTGAAACTGTAGGGAAAGGTGG total mismatch sequence count is  106 | followed by NGG is    6 | highrisk    0
+3 mismatch allowed: TCTGAAACTGTAGGGAAAGGTGG total mismatch sequence count is 2397 | followed by NGG is  135 | highrisk    4
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: AAACTGTAGGGAAAGGTGGTTGG total mismatch sequence count is    1 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: AAACTGTAGGGAAAGGTGGTTGG total mismatch sequence count is   58 | followed by NGG is    1 | highrisk    0
+3 mismatch allowed: AAACTGTAGGGAAAGGTGGTTGG total mismatch sequence count is 1633 | followed by NGG is  107 | highrisk    5
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: AAAGGTGGTTGGCAGACCTCAGG total mismatch sequence count is    0 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: AAAGGTGGTTGGCAGACCTCAGG total mismatch sequence count is   24 | followed by NGG is    4 | highrisk    0
+3 mismatch allowed: AAAGGTGGTTGGCAGACCTCAGG total mismatch sequence count is  854 | followed by NGG is   59 | highrisk    3
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: TGGTTGGCAGACCTCAGGCATGG total mismatch sequence count is    2 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: TGGTTGGCAGACCTCAGGCATGG total mismatch sequence count is   50 | followed by NGG is    3 | highrisk    0
+3 mismatch allowed: TGGTTGGCAGACCTCAGGCATGG total mismatch sequence count is 1676 | followed by NGG is  129 | highrisk    6
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: GGTTGGCAGACCTCAGGCATGGG total mismatch sequence count is    0 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: GGTTGGCAGACCTCAGGCATGGG total mismatch sequence count is   29 | followed by NGG is    0 | highrisk    0
+3 mismatch allowed: GGTTGGCAGACCTCAGGCATGGG total mismatch sequence count is 1196 | followed by NGG is   62 | highrisk    2
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: GTTGGCAGACCTCAGGCATGGGG total mismatch sequence count is    1 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: GTTGGCAGACCTCAGGCATGGGG total mismatch sequence count is   37 | followed by NGG is    6 | highrisk    0
+3 mismatch allowed: GTTGGCAGACCTCAGGCATGGGG total mismatch sequence count is 1635 | followed by NGG is  114 | highrisk    2
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: CAGACCTCAGGCATGGGGTCTGG total mismatch sequence count is    2 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: CAGACCTCAGGCATGGGGTCTGG total mismatch sequence count is   62 | followed by NGG is    5 | highrisk    0
+3 mismatch allowed: CAGACCTCAGGCATGGGGTCTGG total mismatch sequence count is 1779 | followed by NGG is  222 | highrisk    9
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: AGACCTCAGGCATGGGGTCTGGG total mismatch sequence count is    1 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: AGACCTCAGGCATGGGGTCTGGG total mismatch sequence count is   61 | followed by NGG is    4 | highrisk    0
+3 mismatch allowed: AGACCTCAGGCATGGGGTCTGGG total mismatch sequence count is 1902 | followed by NGG is  169 | highrisk    4
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: GACCTCAGGCATGGGGTCTGGGG total mismatch sequence count is    2 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: GACCTCAGGCATGGGGTCTGGGG total mismatch sequence count is   86 | followed by NGG is    7 | highrisk    0
+3 mismatch allowed: GACCTCAGGCATGGGGTCTGGGG total mismatch sequence count is 2235 | followed by NGG is  224 | highrisk    7
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: CTCAGGCATGGGGTCTGGGGAGG total mismatch sequence count is    6 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: CTCAGGCATGGGGTCTGGGGAGG total mismatch sequence count is  185 | followed by NGG is   16 | highrisk    1
+3 mismatch allowed: CTCAGGCATGGGGTCTGGGGAGG total mismatch sequence count is 3667 | followed by NGG is  344 | highrisk   10
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: AGGCATGGGGTCTGGGGAGGAGG total mismatch sequence count is    4 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: AGGCATGGGGTCTGGGGAGGAGG total mismatch sequence count is  359 | followed by NGG is   37 | highrisk   10
+3 mismatch allowed: AGGCATGGGGTCTGGGGAGGAGG total mismatch sequence count is 6961 | followed by NGG is 1000 | highrisk   33
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: GCCAGAAACAACTGAACCCAAGG total mismatch sequence count is    2 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: GCCAGAAACAACTGAACCCAAGG total mismatch sequence count is   50 | followed by NGG is    3 | highrisk    0
+3 mismatch allowed: GCCAGAAACAACTGAACCCAAGG total mismatch sequence count is 1562 | followed by NGG is   96 | highrisk    6
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: AAGTGAACGTGGAAACTCTGAGG total mismatch sequence count is    0 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: AAGTGAACGTGGAAACTCTGAGG total mismatch sequence count is   45 | followed by NGG is    2 | highrisk    0
+3 mismatch allowed: AAGTGAACGTGGAAACTCTGAGG total mismatch sequence count is 1393 | followed by NGG is   90 | highrisk    2
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: CTGATCATCAAAAGTGAACGTGG total mismatch sequence count is    1 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: CTGATCATCAAAAGTGAACGTGG total mismatch sequence count is   27 | followed by NGG is    1 | highrisk    1
+3 mismatch allowed: CTGATCATCAAAAGTGAACGTGG total mismatch sequence count is 1117 | followed by NGG is   91 | highrisk    2
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: TTGTCTTCTGCAATGTATCATGG total mismatch sequence count is    3 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: TTGTCTTCTGCAATGTATCATGG total mismatch sequence count is  130 | followed by NGG is    1 | highrisk    0
+3 mismatch allowed: TTGTCTTCTGCAATGTATCATGG total mismatch sequence count is 4224 | followed by NGG is  137 | highrisk    3
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: GGCCGGGGTTGCCAGGAAGTGGG total mismatch sequence count is    1 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: GGCCGGGGTTGCCAGGAAGTGGG total mismatch sequence count is   16 | followed by NGG is    4 | highrisk    0
+3 mismatch allowed: GGCCGGGGTTGCCAGGAAGTGGG total mismatch sequence count is  587 | followed by NGG is   57 | highrisk    2
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: TGGCCGGGGTTGCCAGGAAGTGG total mismatch sequence count is    1 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: TGGCCGGGGTTGCCAGGAAGTGG total mismatch sequence count is   34 | followed by NGG is    3 | highrisk    0
+3 mismatch allowed: TGGCCGGGGTTGCCAGGAAGTGG total mismatch sequence count is  819 | followed by NGG is   76 | highrisk    3
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: TATGCATGGCCGGGGTTGCCAGG total mismatch sequence count is    0 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: TATGCATGGCCGGGGTTGCCAGG total mismatch sequence count is    9 | followed by NGG is    2 | highrisk    1
+3 mismatch allowed: TATGCATGGCCGGGGTTGCCAGG total mismatch sequence count is  305 | followed by NGG is   19 | highrisk    2
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: TACAACCATATGCATGGCCGGGG total mismatch sequence count is    0 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: TACAACCATATGCATGGCCGGGG total mismatch sequence count is    6 | followed by NGG is    0 | highrisk    0
+3 mismatch allowed: TACAACCATATGCATGGCCGGGG total mismatch sequence count is  293 | followed by NGG is   21 | highrisk    0
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: TTACAACCATATGCATGGCCGGG total mismatch sequence count is    0 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: TTACAACCATATGCATGGCCGGG total mismatch sequence count is   20 | followed by NGG is    1 | highrisk    0
+3 mismatch allowed: TTACAACCATATGCATGGCCGGG total mismatch sequence count is  765 | followed by NGG is   56 | highrisk    3
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: TTTACAACCATATGCATGGCCGG total mismatch sequence count is    0 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: TTTACAACCATATGCATGGCCGG total mismatch sequence count is   27 | followed by NGG is    0 | highrisk    0
+3 mismatch allowed: TTTACAACCATATGCATGGCCGG total mismatch sequence count is 1313 | followed by NGG is   65 | highrisk    4
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: CTTGTTTACAACCATATGCATGG total mismatch sequence count is    1 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: CTTGTTTACAACCATATGCATGG total mismatch sequence count is   51 | followed by NGG is    4 | highrisk    0
+3 mismatch allowed: CTTGTTTACAACCATATGCATGG total mismatch sequence count is 2237 | followed by NGG is   50 | highrisk    0
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: CTCCCCAGACCCCATGCCTGAGG total mismatch sequence count is    9 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: CTCCCCAGACCCCATGCCTGAGG total mismatch sequence count is  337 | followed by NGG is   30 | highrisk    1
+3 mismatch allowed: CTCCCCAGACCCCATGCCTGAGG total mismatch sequence count is 5777 | followed by NGG is  379 | highrisk    5
+----------------------------------------------------------------------------------------------------------------------------------
+1 mismatch allowed: ACCTTGGGTTCAGTTGTTTCTGG total mismatch sequence count is    0 | followed by NGG is    0 | highrisk    0
+2 mismatch allowed: ACCTTGGGTTCAGTTGTTTCTGG total mismatch sequence count is   46 | followed by NGG is    3 | highrisk    0
+3 mismatch allowed: ACCTTGGGTTCAGTTGTTTCTGG total mismatch sequence count is 1431 | followed by NGG is   66 | highrisk    3
+----------------------------------------------------------------------------------------------------------------------------------

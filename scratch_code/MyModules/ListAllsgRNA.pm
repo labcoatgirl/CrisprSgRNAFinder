@@ -19,8 +19,8 @@ sub ListAllsgRNA
 	my $chr_sta = $$input{start};
 	my $chr_end = $$input{end};
 	
-	my $lower_gc_threshold = 0.4;
-	my $upper_gc_threshold = 0.6;
+	my $lower_gc_threshold = 0;
+	my $upper_gc_threshold = 1;
 	
 	my $guidesequence_length = 20; 
 	
