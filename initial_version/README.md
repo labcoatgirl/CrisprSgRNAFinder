@@ -23,7 +23,7 @@
   * ~~Create rigorous test data; (100bp-200bp will be fine); compare with other software~~
   * examine the high-risk mismatch sequence's location (e.g: exon; intron; intergenic)
   * Write the main execuate module
-  * Write the main script to receive the input
+  * ~~Write the main script to receive the input~~
   * Design the input parameters
   * How to make the flow diagram? (what software to use?)
   * 
